@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+ </head>
+ <body>
+  <h2>덧셈 계산기</h2>
+  첫번째 정수 : <input type = "text" id = "one"><br>
+  두번째 정수 : <input type = "text" id = "two"><br>
+  합계 : <input type = "text" id = "total"><br>
+  <input type = "button" onclick = "sum()" value = "계산">
+  <script>
+  function sum(){
+	var one = parseInt(document.getElementById("one").value);
+	var two = parseInt(document.getElementById("two").value);
+	var total = one+two;
+	document.getElementById("total").value = total;
+  }
+  </script>
+ </body>
+</html>

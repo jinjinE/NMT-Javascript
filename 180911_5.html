@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+ </head>
+ <body>
+  <script>
+    var i = 0;
+	document.write("<table border=1>");
+	for(i = 1; i < 10; i++){
+		var j;
+		document.write("<tr>");
+		for(j = 1; j < 10; j ++){
+			document.write("<td>"+i*j+"</td>");
+			document.write();
+		}
+		document.write("</tr>");
+	}
+	document.write("</table>");
+  </script>
+ </body>
+</html>
