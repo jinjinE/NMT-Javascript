@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+
+        <h1> 숫자 맞추기 게임 </h1>
+        <br><br>
+        이 게임은 컴퓨터가 생성한 숫자를 맞추는 게임입니다.<br>
+        숫자는 1부터 100 사이에 있습니다.<br>
+        숫자: <input type="text" name="number" size="10" id="number"><input type="button" value="확인" onclick="confirmClick()">추측횟수<input type="number" size="10" name="count" id="count">힌트<input type="output" size="10" name="output" id="output">
+    
+        
+        <script>
+                var count = 0;
+    
+                var number = Math.floor(Math.random() * 100) + 1;
+    
+                function confirmClick() {
+                    count ++;
+                    
+                    var requestNumber = document.getElementById('number').value;
+
+                    if(requestNumber == number) {
+                        document.getElementById('output').value = "정답입니다.";
+                        alert('정답입니다.');
+                    } else if(requestNumber > number){
+                        document.getElementById('output').value = "높습니다.";
+                    } else {
+                        document.getElementById('output').value = "낮습니다.";
+                    }
+
+                    if(count > 5){
+                        alert('5회까지 시도할 수 있습니다.');
+                        document.getElementById('output').value = "정답 : " + number;
+                    } else {
+                        document.getElementById('count').value = count;
+                    }
+                }
+            </script>
+    </body>
+</html>

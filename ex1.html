@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <script>
+            var today = new Date()
+
+            if(today.getHours() >= 21 && today.getHours() < 3) {
+                alert("Good Night");
+            } else if(today.getHours() < 12) {
+                alert("Good Moring");
+            } else if(today.getHours() < 18) {
+                alert("Good Afternoon");
+            } else {
+                alert("Good Evening");
+            }
+        </script>
+    </body>
+</html>
